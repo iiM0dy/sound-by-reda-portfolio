@@ -19,10 +19,6 @@ const Bts = () => {
         <>
             <h1 className='text-4xl md:text-5xl font-bold text-white text-center mt-8'>BTS</h1>
             <p className='mt-2 text-[#A8A8A8] text-center mb-8'>From reality on set to emotion in the mix</p>
-
-            <div className='bg-[#1a1a1ac3] w-full py-7 text-center mb-10'>
-                <h1 className='text-4xl md:text-5xl font-bold text-[#3EA6FF] text-center'>Images</h1>
-            </div>
             <div className='flex flex-row justify-center px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 h-full w-full'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10'>
 
@@ -33,9 +29,7 @@ const Bts = () => {
                     ))}
                 </div>
             </div>
-            <div className='bg-[#1a1a1ac3] w-full py-7 text-center my-10'>
-                <h1 className='text-4xl md:text-5xl font-bold text-[#3EA6FF] text-center'>Videos</h1>
-            </div>
+            <br />
             <div className='flex flex-row justify-center px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 h-full w-full'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10'>
 
@@ -46,9 +40,9 @@ const Bts = () => {
                     ))}
                 </div>
             </div>
+            <br />
         </>
 
     )
 }
-// VID-20251224-WA0
 export default Bts
