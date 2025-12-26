@@ -15,7 +15,7 @@ const ContactForm = () => {
     setSubmitted(true);
   };
   return (
-    <div className="w-full max-w-[420px]">
+    <div className="w-full max-w-105">
       <form onSubmit={submitHandler} className=" flex flex-col text-white">
         <p className="mt-6 mb-1">Name*</p>
         <input
@@ -23,9 +23,8 @@ const ContactForm = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Your name"
-          className={`outline-none bg-[#A8A8A8] py-3 px-4 ${
-            submitted && !name ? "ring-1 ring-red-500" : ""
-          }`}
+          className={`outline-none rounded-md bg-[#A8A8A8] py-3 px-4 text-[#1A1A1A] ${submitted && !name ? "ring-1 ring-red-500" : ""
+            }`}
         />
         {submitted && !name && (
           <p className="text-red-400">The First Name is required</p>
@@ -34,7 +33,7 @@ const ContactForm = () => {
         <input
           type="text"
           placeholder="Your last name"
-          className="outline-none bg-[#A8A8A8] py-3 px-4"
+          className="outline-none bg-[#A8A8A8] rounded-md py-3 px-4 text-[#1A1A1A]"
         />
         <p className="mt-6 mb-1">Email*</p>
         <input
@@ -42,11 +41,10 @@ const ContactForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Your Email"
-                    className={`outline-none bg-[#A8A8A8] py-3 px-4 ${
-            submitted && !email ? "ring-1 ring-red-500" : ""
-          }`}
+          className={`outline-none bg-[#A8A8A8] py-3 px-4 rounded-md text-[#1A1A1A] ${submitted && !email ? "ring-1 ring-red-500" : ""
+            }`}
         />
-                {submitted && !email && (
+        {submitted && !email && (
           <p className="text-red-400">The Email is required</p>
         )}
         <p className="mt-6 mb-1">Message*</p>
@@ -54,9 +52,9 @@ const ContactForm = () => {
           placeholder="Enter your message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="outline-none bg-[#A8A8A8] py-3 px-4 min-h-[110px]"
+          className="outline-none bg-[#A8A8A8] py-3 px-4 min-h-27.5 rounded-md text-[#1A1A1A]"
         />
-                {submitted && !message && (
+        {submitted && !message && (
           <p className="text-red-400">The Message is required</p>
         )}
         <button
