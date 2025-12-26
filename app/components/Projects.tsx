@@ -10,16 +10,15 @@ interface Src {
 }
 
 const movies: Src[] = [
-
-  { id: 1, title: 'Esabet Azema (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/76XZybzJQ14' },
-  { id: 2, title: 'El Sett (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/LlhGrxC5Ifc' },
+  { id: 1, title: 'El Sett (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/LlhGrxC5Ifc' },
+  { id: 2, title: 'Kira w El Ginn (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/COkUlflnkbk' },
   { id: 3, title: 'Shee’o (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/bzOr9-9bj6g' },
-  { id: 4, title: 'Baa’d El Shar (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/9gnkWl8R5pI' },
-  { id: 5, title: 'Mr. EX (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/p6FcQ00jTUQ' },
-  { id: 6, title: 'Kira w El Ginn (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/COkUlflnkbk' }];
+  { id: 4, title: 'Esabet Azema (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/76XZybzJQ14' },
+  { id: 5, title: 'Baa’d El Shar (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/9gnkWl8R5pI' },
+  { id: 6, title: 'Mr. EX (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/p6FcQ00jTUQ' },
+];
 
 const series: Src[] = [
-
   { id: 1, title: 'Al Hashasheen (Egyptian Series)', description: 'participating On-Set Sound Recording', promoUrl: 'https://youtube.com/embed/DCO8fe0rOyE' }, { id: 2, title: 'Mamlakat El Harir (Egyptian Series)', description: '', promoUrl: 'https://youtube.com/embed/ziCJ-_c3o58' },
   { id: 3, title: 'Ramadan Kareem Season 2 (Egyptian Series)', description: '', promoUrl: 'https://youtube.com/embed/onAJv3VNT2M' },
   { id: 4, title: 'Ala Bab El Omara (Egyptian Series)', description: '', promoUrl: 'https://youtube.com/embed/s2LHCvfMgso' },
@@ -29,7 +28,6 @@ const series: Src[] = [
   { id: 8, title: 'Gameela (Egyptian Series)', description: '', promoUrl: 'https://youtube.com/embed/rzgFBuHstuw' },
   { id: 9, title: 'El Sofara (Egyptian Series)', description: '', promoUrl: 'https://youtube.com/embed/ZJDBN2SHuJM' }];
 
-
 const commercials: Src[] = [
 
   { id: 1, title: 'Etisalat – Sherine Abdel Wahab (Commercial)', description: '', promoUrl: 'https://youtube.com/embed/dT3Z1272d-Y' },
@@ -38,11 +36,9 @@ const commercials: Src[] = [
   { id: 4, title: 'Hadeed Ezz 2025 (Commercial)', description: '', promoUrl: 'https://youtube.com/embed/mqxec0scFoo' },];
 
 const shows: Src[] = [
-
   { id: 1, title: 'بودكاست الحل إيه؟ المسؤولية المجتمعية لرجال الأعمال في مصر مع رجل الأعمال سميح ساويرس', description: '', promoUrl: 'https://youtube.com/embed/HWEPMqnu-TA?si=iLCzVrvWMVr7HQ0H' },
   { id: 2, title: 'Demagh Sem - MSH KEDA', description: '', promoUrl: 'https://youtube.com/embed/-TrIR6ule_w?si=AF3xb-V89asIHB4g' },
   { id: 3, title: 'Demagh Sem - MSH KEDA', description: '', promoUrl: 'https://youtube.com/embed/D7EQ0ImwjZc?si=aVO8vlIOlklD9G3Y' },
-
   { id: 4, title: 'Demagh Sem - MSH KEDA', description: '', promoUrl: 'https://youtube.com/embed/oh-NMv2P89E?si=ZZDgQm4DGmVJwKni' },
   { id: 5, title: 'بودكاست الحل إيه؟ حلقة خاصه عن البحث العلمي مع الدكتور محمد ابو الغار ورباب المهدي', description: '', promoUrl: 'https://youtube.com/embed/YgB_9Md5YRg?si=0qbMCjASicp7Xeu-' },
   { id: 6, title: 'بودكاست الحل إيه؟ | ماذا بعد 7 أكتوبر؟ .. عمرو موسى يطرح رؤيته للعالم العربي بعد السابع من أكتوبر', description: '', promoUrl: 'https://youtube.com/embed/ZSRug1CN0e0?si=scJ4tublDgT6R9O9' },
@@ -75,14 +71,14 @@ const VideoCard = ({ item }: { item: Src }) => {
       </div>
 
       <h2 className="text-white text-2xl mt-4">{item.title}</h2>
-      <p className="mt-2 text-[#A8A8A8]">{item.description}</p>
+      <p className="mt-2 text-[#A8A8A8]">participating On-Set Sound Recording</p>
 
       {isInstagram && (
         <a
           href={item.promoUrl.replace("/embed", "")}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-2 text-[#3EA6FF] underline"
+          className="inline-block mt-2 text-secondery-color underline"
         >
           View on Instagram
         </a>
@@ -93,11 +89,8 @@ const VideoCard = ({ item }: { item: Src }) => {
 
 const Section = ({ title, data }: { title: string; data: Src[] }) => (
   <>
-    <div className="bg-[#1a1a1ac3] w-full py-7 text-center my-10">
-      <h1 className="text-4xl md:text-5xl font-bold text-[#3EA6FF]">{title}</h1>
-    </div>
-
-    <div className="flex flex-wrap gap-8 justify-center">
+    <h1 className="text-4xl md:text-5xl font-bold text-secondery-color text-center py-10">{title}</h1>
+    <div className="flex flex-wrap gap-8 justify-center px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
       {data.map(item => (
         <VideoCard key={item.id} item={item} />
       ))}
@@ -119,7 +112,7 @@ const Projects = () => {
       <Section title="Series" data={series} />
       <Section title="Commercials" data={commercials} />
       <Section title="Shows" data={shows} />
-
+      <br />
     </>
   );
 };
