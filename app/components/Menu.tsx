@@ -8,10 +8,10 @@ const Menu = () => {
         <div>
             {/* LARGE SCREENS */}
             <div className='hidden lg:flex'>
-                <Link href='/' className='px-4 text-xl text-white font-semibold hover:text-[#3EA6FF] duration-300 ease-in-out'>Home</Link>
-                <Link href='#projects' className='px-4 text-xl text-white font-semibold hover:text-[#3EA6FF] duration-300 ease-in-out'>Projects</Link>
-                <Link href='#contact' className='px-4 text-xl text-white font-semibold hover:text-[#3EA6FF] duration-300 ease-in-out'>Contact</Link>
-                <Link href='/bts' className='px-4 text-xl text-white font-semibold hover:text-[#3EA6FF] duration-300 ease-in-out'>BTS</Link>
+                <Link href='/' className='px-4 text-xl text-white font-semibold before:content-[""] relative hover:before:absolute before:left-4 before:-bottom-1 before:w-0 hover:before:w-[calc(100%-32px)] before:h-0.5 before:bg-white before:duration-300 duration-300 before:ease-in-out ease-in-out'>Home</Link>
+                <Link href='/#projects' className='px-4 text-xl text-white font-semibold before:content-[""] relative hover:before:absolute before:left-4 before:-bottom-1 before:w-0 hover:before:w-[calc(100%-32px)] before:h-0.5 before:bg-white before:duration-300 duration-300 before:ease-in-out ease-in-out'>Projects</Link>
+                <Link href='/#contact' className='px-4 text-xl text-white font-semibold before:content-[""] relative hover:before:absolute before:left-4 before:-bottom-1 before:w-0 hover:before:w-[calc(100%-32px)] before:h-0.5 before:bg-white before:duration-300 duration-300 before:ease-in-out ease-in-out'>Contact</Link>
+                <Link href='/bts' className='px-4 text-xl text-white font-semibold before:content-[""] relative hover:before:absolute before:left-4 before:-bottom-1 before:w-0 hover:before:w-[calc(100%-32px)] before:h-0.5 before:bg-white before:duration-300 duration-300 before:ease-in-out ease-in-out'>BTS</Link>
             </div>
             {/* SMALL SCREENS */}
             <div className='w-10 h-10  flex flex-col justify-around cursor-pointer lg:hidden' onClick={() => setIsOpen((prev) => !prev)}>
