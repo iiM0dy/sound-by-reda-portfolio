@@ -24,18 +24,18 @@ const Bts = () => {
 
                     {btsImages.map((image) => (
                         <div key={image.id} className=''>
-                            <img src={image.src} className='w-full h-full' />
+                            <img src={image.src} className='w-full h-150 object-cover' />
                         </div>
                     ))}
                 </div>
             </div>
-            <br />
-            <div className='flex flex-row justify-center px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 h-full w-full'>
+            <div className=' my-10 ' ></div>
+            <div className='flex flex-row justify-center px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 h-full w-full '>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10'>
 
                     {btsVideos.map((video) => (
                         <div key={video.id}>
-                            <video preload='metadata' controls src={video.src} className='w-full h-full object-fill' />
+                            <video preload='metadata' controls src={video.src} className='w-full h-150 object-cover' />
                         </div>
                     ))}
                 </div>
