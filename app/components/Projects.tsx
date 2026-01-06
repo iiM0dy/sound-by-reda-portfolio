@@ -1,5 +1,6 @@
 'use client'
 
+import Link from "next/link";
 import React, { useEffect } from "react";
 
 interface Src {
@@ -9,22 +10,26 @@ interface Src {
   promoUrl: string;
 }
 
-const movies: Src[] = [
+
+const test: Src[] = [
   { id: 1, title: 'El Sett (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/LlhGrxC5Ifc' },
+  { id: 2, title: 'Shee’o (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/bzOr9-9bj6g' },
+  { id: 3, title: 'Mr. EX (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/p6FcQ00jTUQ' },
+  { id: 4, title: 'Al Hashasheen (Egyptian Series)', description: 'participating On-Set Sound Recording', promoUrl: 'https://youtube.com/embed/DCO8fe0rOyE' }, { id: 2, title: 'Mamlakat El Harir (Egyptian Series)', description: '', promoUrl: 'https://youtube.com/embed/ziCJ-_c3o58' },
+  { id: 5, title: 'Hakeem Basha (Egyptian Series)', description: '', promoUrl: 'https://youtube.com/embed/KxLXLJC8y-0' },
+  { id: 6, title: 'Ahwet El Mahatta (Egyptian Series)', description: '', promoUrl: 'https://youtube.com/embed/aZaVihEuVTE' },
+]
+
+const movies: Src[] = [
   { id: 2, title: 'Kira w El Ginn (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/COkUlflnkbk' },
-  { id: 3, title: 'Shee’o (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/bzOr9-9bj6g' },
   { id: 4, title: 'Esabet Azema (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/76XZybzJQ14' },
   { id: 5, title: 'Baa’d El Shar (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/9gnkWl8R5pI' },
-  { id: 6, title: 'Mr. EX (Egyptian Movie)', description: '', promoUrl: 'https://youtube.com/embed/p6FcQ00jTUQ' },
 ];
 
 const series: Src[] = [
-  { id: 1, title: 'Al Hashasheen (Egyptian Series)', description: 'participating On-Set Sound Recording', promoUrl: 'https://youtube.com/embed/DCO8fe0rOyE' }, { id: 2, title: 'Mamlakat El Harir (Egyptian Series)', description: '', promoUrl: 'https://youtube.com/embed/ziCJ-_c3o58' },
   { id: 3, title: 'Ramadan Kareem Season 2 (Egyptian Series)', description: '', promoUrl: 'https://youtube.com/embed/onAJv3VNT2M' },
   { id: 4, title: 'Ala Bab El Omara (Egyptian Series)', description: '', promoUrl: 'https://youtube.com/embed/s2LHCvfMgso' },
   { id: 5, title: 'El Laaba Season 4 (Egyptian Series)', description: '', promoUrl: 'https://youtube.com/embed/ma7InmmiNi4' },
-  { id: 6, title: 'Hakeem Basha (Egyptian Series)', description: '', promoUrl: 'https://youtube.com/embed/KxLXLJC8y-0' },
-  { id: 7, title: 'Ahwet El Mahatta (Egyptian Series)', description: '', promoUrl: 'https://youtube.com/embed/aZaVihEuVTE' },
   { id: 8, title: 'Gameela (Egyptian Series)', description: '', promoUrl: 'https://youtube.com/embed/rzgFBuHstuw' },
   { id: 9, title: 'El Sofara (Egyptian Series)', description: '', promoUrl: 'https://youtube.com/embed/ZJDBN2SHuJM' }];
 
@@ -57,8 +62,7 @@ const VideoCard = ({ item }: { item: Src }) => {
   return (
     <div className="w-full md:w-140 px-4 md:px-0">
       <div
-        className={`relative w-full overflow-hidden rounded-lg ${isInstagram ? "pb-[177.77%]" : "pb-[56.25%]"
-          }`}
+        className={`relative w-full overflow-hidden rounded-lg pb-[56.25%] `}
       >
         <iframe
           className="absolute inset-0 w-full h-full"
@@ -72,25 +76,15 @@ const VideoCard = ({ item }: { item: Src }) => {
 
       <h2 className="text-white text-2xl mt-4">{item.title}</h2>
       <p className="mt-2 text-[#A8A8A8]">participating On-Set Sound Recording</p>
-
-      {isInstagram && (
-        <a
-          href={item.promoUrl.replace("/embed", "")}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-2 text-secondery-color underline"
-        >
-          View on Instagram
-        </a>
-      )}
     </div>
   );
 };
 
-const Section = ({ title, data }: { title: string; data: Src[] }) => (
+const Section = ({ data }: { data: Src[] }) => (
   <>
-    <h1 className="text-4xl md:text-5xl font-bold text-secondery-color text-center py-10">{title}</h1>
-    <div className="flex flex-wrap gap-8 justify-center px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+    <p className="text-white text-center text-5xl font-bold mt-20">Our Recent Projects</p>
+    <div className="flex flex-wrap gap-8 justify-center px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 mt-15">
+
       {data.map(item => (
         <VideoCard key={item.id} item={item} />
       ))}
@@ -99,19 +93,18 @@ const Section = ({ title, data }: { title: string; data: Src[] }) => (
 );
 
 const Projects = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://www.instagram.com/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
 
   return (
     <>
-      <Section title="Movies" data={movies} />
-      <Section title="Series" data={series} />
-      <Section title="Commercials" data={commercials} />
-      <Section title="Shows" data={shows} />
+      <Section data={test} />
+      <div className="flex flex-col gap-3 w-full sm:flex-row items-center justify-center my-10 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+        <Link href="https://wa.me/201025811491" target="_blank" className="bg-white ring-2 text-center ring-white text-[#0f0f0f] font-bold px-4 py-3 rounded-2xl mt-4 cursor-pointer hover:bg-[#acacac] hover:ring-[#acacac] transition md:w-60 w-full">
+          Get in touch
+        </Link>
+        <Link href="/projects" className="bg-transparent ring-2 ring-white text-white text-center font-bold px-4 py-3 rounded-2xl mt-4 cursor-pointer hover:bg-white hover:text-[#0F0F0F] transition md:w-60 w-full">
+          Our Projects
+        </Link>
+      </div>
       <br />
     </>
   );
