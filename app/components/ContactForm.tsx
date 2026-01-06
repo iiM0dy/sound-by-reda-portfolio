@@ -52,7 +52,8 @@ const ContactForm = () => {
           placeholder="Enter your message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="outline-none bg-[#A8A8A8] py-3 px-4 min-h-27.5 rounded-md text-[#1A1A1A]"
+          className={`outline-none bg-[#A8A8A8] py-3 px-4 min-h-27.5 rounded-md text-[#1A1A1A] ${submitted && !message ? "ring-1 ring-red-500" : ""
+            }`}
         />
         {submitted && !message && (
           <p className="text-red-400">The Message is required</p>
