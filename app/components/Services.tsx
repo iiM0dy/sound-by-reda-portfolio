@@ -6,7 +6,7 @@ const Services = () => {
     return (
         <div>
             <h1 className='text-white font-bold text-4xl text-center my-10 '>Our Services</h1>
-            <div className='flex flex-col lg:flex-row gap-6'>
+            <div className='flex flex-col items:ceenter justify:center lg:flex-row gap-6'>
                 <div className='flex-col  w-full sm:w-120 h-135 bg-[#1A1A1A] rounded-2xl'>
                     <div className='relative w-full h-80'>
                         <Image src="/images/IMG-20251224-WA0.jpg" className='object-cover rounded-t-2xl' alt='' fill />
