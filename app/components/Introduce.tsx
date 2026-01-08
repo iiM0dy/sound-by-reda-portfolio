@@ -4,7 +4,7 @@ import React from "react";
 
 const Introduce = () => {
     return (
-        <div className="flex flex-col justify-center items-center mt-10">
+        <div className="flex flex-col justify-center items-center my-10">
             <div className="relative w-60 h-60">
                 <Image
                     fill
@@ -28,4 +28,5 @@ const Introduce = () => {
 };
 
 export default Introduce;
+
 
