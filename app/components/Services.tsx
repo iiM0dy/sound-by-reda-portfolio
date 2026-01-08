@@ -9,7 +9,7 @@ const Services = () => {
             <div className='flex flex-col lg:flex-row gap-6'>
                 <div className='flex-col  w-full sm:w-120 h-135 bg-[#1A1A1A] rounded-2xl'>
                     <div className='relative w-full h-80'>
-                        <Image src="/images/IMG-20251224-WA0.jpeg" className='object-cover rounded-t-2xl' alt='' fill />
+                        <Image src="/images/IMG-20251224-WA0.jpg" className='object-cover rounded-t-2xl' alt='' fill />
                     </div>
                     <div className="flex border-x-4 m-4 px-3  border-white items-center w-max h-6 my-5">
                         <h1 className="text-2xl text-white font-bold ">Location Sound Recording</h1>
