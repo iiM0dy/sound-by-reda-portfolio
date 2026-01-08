@@ -5,7 +5,7 @@ interface BtsSrc {
     src: string,
 }
 
-const btsImages: BtsSrc[] = Array.from({ length: 36 }, (_, index) => ({
+const btsImages: BtsSrc[] = Array.from({ length: 37 }, (_, index) => ({
     id: index,
     src: `/images/IMG-20251224-WA${index}.jpg`,
 }));
