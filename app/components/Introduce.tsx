@@ -4,7 +4,7 @@ import React from "react";
 
 const Introduce = () => {
     return (
-        <div className="flex flex-col justify-center items-center my-10">
+        <div className="flex flex-col justify-center items-center mt-10">
             <div className="relative w-60 h-60">
                 <Image
                     fill
@@ -19,7 +19,7 @@ const Introduce = () => {
             <div className="flex border-x-4 px-3  border-white items-center h-10">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-white font-bold">Production Sound Mixer</h1>
             </div>
-            <div className="flex border-x-4 px-3 mt-7 border-white items-center h-10">
+            <div className="flex border-x-4 px-3 mt-7 border-white items-center h-10 mb-10">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-white font-bold">Audio Post Services</h1>
             </div>
 
@@ -28,5 +28,6 @@ const Introduce = () => {
 };
 
 export default Introduce;
+
 
 
