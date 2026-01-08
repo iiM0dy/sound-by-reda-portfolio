@@ -17,10 +17,10 @@ const Introduce = () => {
 
             </div>
             <div className="flex border-x-4 px-3  border-white items-center h-10">
-                <h1 className="text-4xl text-white font-bold ">Production Sound Mixer</h1>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-white font-bold">Production Sound Mixer</h1>
             </div>
             <div className="flex border-x-4 px-3 mt-7 border-white items-center h-10">
-                <h1 className="text-4xl text-white font-bold">Audio Post Services</h1>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-white font-bold">Audio Post Services</h1>
             </div>
 
         </div>
@@ -28,3 +28,4 @@ const Introduce = () => {
 };
 
 export default Introduce;
+
